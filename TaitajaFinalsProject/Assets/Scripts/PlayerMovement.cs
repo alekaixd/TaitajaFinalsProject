@@ -3,6 +3,7 @@ using UnityEngine.UIElements.Experimental;
 
 //Header
 //Controls the player character (moving, jumping etc)
+//Lot of the script is from youtube video. Link here: https://www.youtube.com/watch?v=K1xZ-rycYY8 
 //Header
 public class PlayerMovement : MonoBehaviour
 {
