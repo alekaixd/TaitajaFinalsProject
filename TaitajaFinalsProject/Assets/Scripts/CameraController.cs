@@ -32,12 +32,9 @@ public class CameraController : MonoBehaviour
 
         canvasManager = GameObject.Find("Canvas").GetComponent<CanvasManager>();
 
-        Debug.Log(originalZoomSize);
-        Debug.Log(originalCameraPosition);
+
 
         StartCoroutine(StartZoom(beforeZoomTime));
-
-
     }
 
     
@@ -62,7 +59,7 @@ public class CameraController : MonoBehaviour
             if(mainCamera.GetComponent<Camera>().orthographicSize == originalZoomSize )
             {
                 startZoom = false;
-                arrows.gameObject.SetActive(false);
+                arrows.gameObject.SetActive(true);
             }
 
         }
