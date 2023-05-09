@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.Rendering.DebugUI;
-using Debug = UnityEngine.Debug;
 
 /*
  * collects the coin and moves the collected coin out of view
