@@ -4,40 +4,46 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/*
+ * script manages all activity on the "map scene" canvas
+ */
+
 public class CanvasManager : MonoBehaviour
 {
 
-    public GameObject[] levels;
+    public GameObject[] levels; // all clickable level objects
     
-    public GameObject arrowRight;
-    public GameObject arrowLeft;
     public GameObject doubleJump;
     public GameObject doubleCoins;
     public GameObject nextLevel;
     public GameObject shopIcon;
     public GameObject shopOverlay;
-    public int selectedLevel = 0;
+    public int selectedLevel = 0; // used in the click register
     public int unlockedLevels = 0;
 
     private CameraController cameraController;
 
-
-
-    // Start is called before the first frame update
     void Start()
     {
         cameraController = GameObject.Find("CameraController").GetComponent<CameraController>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void MoveToDirection(int level) // starts moving the camera towards the next level when called
     {
-        
+        cameraController.MoveCamera(levels[level], level); // "levels[level]" is the level the camera is going to stop at and integer level is used in the camera controller
     }
 
-    public void MoveToDirection(int level)
+    public void ActivateShopOverlay()
     {
-        cameraController.MoveCamera(levels[level], level);
+        if (shopOverlay.activeSelf == true) 
+        {
+            shopOverlay.SetActive(false);
+        }
+        else 
+        { 
+            shopOverlay.SetActive(true); 
+        }
+        
     }
 
     public void buyDoubleJump()
@@ -53,10 +59,12 @@ public class CanvasManager : MonoBehaviour
         AudioManager.instance.PlaySFX("Buying SoundEffect");
     }
 
-    public void buyNextLevel()
+    public void buyNextLevel() // unlocks a new level to be entered 
     {
         nextLevel.SetActive(false);
         unlockedLevels += 1;
         AudioManager.instance.PlaySFX("Buying SoundEffect");
     }
+
+
 }

@@ -6,6 +6,10 @@ using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
 using Debug = UnityEngine.Debug;
 
+/*
+ * collects the coin and moves the collected coin out of view
+ * moves the coin back after some time
+ */
 
 public class CoinScript : MonoBehaviour
 {
@@ -15,7 +19,6 @@ public class CoinScript : MonoBehaviour
 
     public float coinRespawnTime = 7.0f;
 
-    //public GameObject CoinPrefab;
 
     private void Start()
     {
@@ -27,7 +30,7 @@ public class CoinScript : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) //checks for the player and adds the coins
     {
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -36,7 +39,7 @@ public class CoinScript : MonoBehaviour
         }
     }
 
-    private IEnumerator CoinRespawnTimer(float respawnTime)
+    private IEnumerator CoinRespawnTimer(float respawnTime)// teleports the coin out of view and back after some time
     {
         Vector2 originalPosition = transform.position;
         gameObject.transform.Translate(100, 100, 0); //magic numbers teleport the coin out of view

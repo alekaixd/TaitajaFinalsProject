@@ -3,23 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+ * used to load the level scenes
+ */
+
 public class LevelSelectorScript : MonoBehaviour
 {
     public CanvasManager canvasManager;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void OnMouseDown()
+    void OnMouseDown() // checks for tags and loads the specified level
     {
         if (gameObject.CompareTag("Level1"))
         {
