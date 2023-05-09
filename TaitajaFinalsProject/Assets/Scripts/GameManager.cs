@@ -4,6 +4,10 @@ using TMPro;
 using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 
+/*
+ * manages the collected coins in the levels and the coin text
+ */
+
 public class GameManager : MonoBehaviour
 {
 
@@ -15,13 +19,12 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
     }
-    // Start is called before the first frame update
+
     void Start()
     {
         CoinText.text = "Coins " + coins.ToString();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
