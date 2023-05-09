@@ -43,16 +43,20 @@ public class CanvasManager : MonoBehaviour
     public void buyDoubleJump()
     {
         doubleJump.SetActive(false);
+        AudioManager.instance.PlaySFX("Buying SoundEffect");
+        
     }
 
     public void buyDoubleCoins()
     {
         doubleCoins.SetActive(false);
+        AudioManager.instance.PlaySFX("Buying SoundEffect");
     }
 
     public void buyNextLevel()
     {
         nextLevel.SetActive(false);
         unlockedLevels += 1;
+        AudioManager.instance.PlaySFX("Buying SoundEffect");
     }
 }
