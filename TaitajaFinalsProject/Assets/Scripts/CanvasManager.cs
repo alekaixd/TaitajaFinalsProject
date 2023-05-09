@@ -11,7 +11,13 @@ public class CanvasManager : MonoBehaviour
     
     public GameObject arrowRight;
     public GameObject arrowLeft;
+    public GameObject doubleJump;
+    public GameObject doubleCoins;
+    public GameObject nextLevel;
+    public GameObject shopIcon;
+    public GameObject shopOverlay;
     public int selectedLevel = 0;
+    public int unlockedLevels = 0;
 
     private CameraController cameraController;
 
@@ -34,4 +40,19 @@ public class CanvasManager : MonoBehaviour
         cameraController.MoveCamera(levels[level], level);
     }
 
+    public void buyDoubleJump()
+    {
+        doubleJump.SetActive(false);
+    }
+
+    public void buyDoubleCoins()
+    {
+        doubleCoins.SetActive(false);
+    }
+
+    public void buyNextLevel()
+    {
+        nextLevel.SetActive(false);
+        unlockedLevels += 1;
+    }
 }
