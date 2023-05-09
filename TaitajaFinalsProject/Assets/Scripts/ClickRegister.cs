@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,33 +20,20 @@ public class ClickRegister : MonoBehaviour
         
     }
 
-    private void OnMouseDown()
+    public void MoveRight() 
     {
-        Debug.Log("Click!");
-
-        if (gameObject.CompareTag("ArrowRight"))
+        if(canvasManager.selectedLevel != canvasManager.levels.Length - 1) // magic number becouse levels index starts at 0 and selected level at 1
         {
-            Debug.Log("CLICK!");
             canvasManager.selectedLevel += 1;
             canvasManager.MoveToDirection(canvasManager.selectedLevel);
         }
-
-        else if (gameObject.CompareTag("ArrowLeft"))
+    }
+    public void MoveLeft()
+    {
+        if (canvasManager.selectedLevel > 0)
         {
             canvasManager.selectedLevel -= 1;
             canvasManager.MoveToDirection(canvasManager.selectedLevel);
         }
-    }
-
-    public void MoveRight() 
-    {
-        Debug.Log("CLICK!");
-        canvasManager.selectedLevel += 1;
-        canvasManager.MoveToDirection(canvasManager.selectedLevel);
-    }
-    public void MoveLeft()
-    {
-        canvasManager.selectedLevel -= 1;
-        canvasManager.MoveToDirection(canvasManager.selectedLevel);
     }
 }

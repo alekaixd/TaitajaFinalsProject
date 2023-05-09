@@ -34,13 +34,4 @@ public class CanvasManager : MonoBehaviour
         cameraController.MoveCamera(levels[level], level);
     }
 
-   
-
-    private void OnMouseDown()
-    {
-        if(gameObject == arrowRight)
-        {
-            Debug.Log("moveRight");
-        }
-    }
 }

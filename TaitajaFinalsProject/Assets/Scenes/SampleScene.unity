@@ -325,7 +325,7 @@ MonoBehaviour:
   speed: 12.22
   zoomSpeed: 2.6
   startZoom: 0
-  arrows: {fileID: 0}
+  arrows: {fileID: 214809321}
 --- !u!4 &208907368
 Transform:
   m_ObjectHideFlags: 0

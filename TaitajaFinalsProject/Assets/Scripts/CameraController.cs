@@ -32,7 +32,7 @@ public class CameraController : MonoBehaviour
 
         canvasManager = GameObject.Find("Canvas").GetComponent<CanvasManager>();
 
-
+        arrows.SetActive(false);
 
         StartCoroutine(StartZoom(beforeZoomTime));
     }
