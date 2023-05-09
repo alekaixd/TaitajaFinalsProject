@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            AudioManager.instance.PlaySFX("Jump");
 
         }
 
