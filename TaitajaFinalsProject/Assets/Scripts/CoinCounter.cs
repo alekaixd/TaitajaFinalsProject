@@ -20,13 +20,13 @@ public class CoinCounter : MonoBehaviour
     void Start()
     {
 
-        CoinText.text = "Coins" + CurrentCoins.ToString();
+        CoinText.text = "Coins " + CurrentCoins.ToString();
     }
 
     public void increaseCoins (int v)
     {
         CurrentCoins += v;
-        CoinText.text = "Coins" + CurrentCoins.ToString();
+        CoinText.text = "Coins " + CurrentCoins.ToString();
 
     }
 }
