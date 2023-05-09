@@ -322,7 +322,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 519420031}
   zoomCamera: {fileID: 613207095}
-  speed: 5
+  speed: 12.22
+  zoomSpeed: 2.6
 --- !u!4 &208907368
 Transform:
   m_ObjectHideFlags: 0
