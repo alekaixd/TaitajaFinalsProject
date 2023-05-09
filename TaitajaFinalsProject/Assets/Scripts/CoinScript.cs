@@ -17,6 +17,8 @@ public class CoinScript : MonoBehaviour
     public float TimeLeft;
     public bool TimerOn = false;
 
+    public GameManager gameManager;
+
     //public GameObject CoinPrefab;
 
     private void Start()
@@ -56,7 +58,7 @@ public class CoinScript : MonoBehaviour
             //Destroy(gameObject);
 
             TimerOn = true;
-            CoinCounter.Instance.increaseCoins(value);
+            gameManager.coins += value;
 
         }
     }
