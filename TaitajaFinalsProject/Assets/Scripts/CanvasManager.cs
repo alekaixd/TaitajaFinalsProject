@@ -36,6 +36,20 @@ public class CanvasManager : MonoBehaviour
         cameraController = GameObject.Find("CameraController").GetComponent<CameraController>();
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+        if (gameManager.unlockedLevels >= 1)
+        {
+            for (int i = 0; i < gameManager.unlockedLevels; i++)
+            {
+                lockIcons[gameManager.unlockedLevels - 1 - i].SetActive(false);
+                levelText[gameManager.unlockedLevels - 1 - i].SetActive(true);
+            }
+            
+            if(gameManager.unlockedLevels >= 2)
+            {
+                nextLevel.SetActive(false);
+            }
+        }
     }
 
     public void MoveToDirection(int level) // starts moving the camera towards the next level when called
