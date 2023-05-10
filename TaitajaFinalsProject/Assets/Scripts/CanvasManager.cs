@@ -30,14 +30,15 @@ public class CanvasManager : MonoBehaviour
     private CameraController cameraController;
 
     public bool onkotuplahyppyOstettu = false;
-
-    private bool coinUpgradeBought = false;
+    private CoinCanvasScript coinCanvasScript;
+    
 
     void Start()
     {
         cameraController = GameObject.Find("CameraController").GetComponent<CameraController>();
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        coinCanvasScript = GameObject.Find("CoinCanvas").GetComponent<CoinCanvasScript>();
 
         if (gameManager.unlockedLevels >= 1)
         {
@@ -55,12 +56,14 @@ public class CanvasManager : MonoBehaviour
             }
         }
 
+        coinCanvasScript.UpdateScore(gameManager.coins);
+
         if(onkotuplahyppyOstettu == true)
         {
             doubleJump.SetActive(false);
         }
 
-        if (coinUpgradeBought == true)
+        if (gameManager.coinUpgradeBought == true)
         {
             shopOverlay.SetActive(false);
         }
@@ -76,7 +79,6 @@ public class CanvasManager : MonoBehaviour
         if (shopOverlay.activeSelf == true)
         {
             shopOverlay.SetActive(false);
-            coinUpgradeBought = true;
         }
         else
         {
@@ -86,9 +88,9 @@ public class CanvasManager : MonoBehaviour
                 doubleJump.SetActive(false);
             }
 
-            if (coinUpgradeBought == true)
+            if (gameManager.coinUpgradeBought == true)
             {
-                shopOverlay.SetActive(false);
+                doubleCoins.SetActive(false);
             }
             AudioManager.instance.PlaySFX("Kauppa Click");
             if (gameManager.unlockedLevels >= 2)
@@ -102,6 +104,9 @@ public class CanvasManager : MonoBehaviour
     {
         if (gameManager.coins >= 20)
         {
+            
+            gameManager.coins -= 20;
+            coinCanvasScript.UpdateScore(gameManager.coins);
             Debug.Log("Osta duoble jump");
             Debug.Log(gameManager.doubleJumpActive);
             onkotuplahyppyOstettu = true;
@@ -117,6 +122,7 @@ public class CanvasManager : MonoBehaviour
         if (gameManager.coins >= 20)
         {
             gameManager.coins -= 20;
+            coinCanvasScript.UpdateScore(gameManager.coins);
             doubleCoins.SetActive(false);
             gameManager.coinValue = 2;
             AudioManager.instance.PlaySFX("Buying SoundEffect");
@@ -129,6 +135,7 @@ public class CanvasManager : MonoBehaviour
         if (gameManager.coins >= 50)
         {
             gameManager.coins -= 50;
+            coinCanvasScript.UpdateScore(gameManager.coins);
             gameManager.unlockedLevels += 1;
             lockIcons[gameManager.unlockedLevels - 1].SetActive(false);
             levelText[gameManager.unlockedLevels - 1].SetActive(true);

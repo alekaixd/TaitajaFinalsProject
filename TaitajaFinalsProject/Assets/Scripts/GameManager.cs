@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     public int unlockedLevels = 0;
 
-
+    public bool coinUpgradeBought = false;
     public bool doubleJumpActive = false;
 
     private CanvasManager canvasManager;
