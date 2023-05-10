@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager Instance;
-    public CoinCanvasScript coinCanvasScript;
+    private CoinCanvasScript coinCanvasScript;
     
     public int coins = 0;
     public int coinValue = 1;
@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
         canvasManager = GameObject.Find("Canvas").GetComponent<CanvasManager>();
+        coinCanvasScript = GameObject.Find("CoinCanvas").GetComponent<CoinCanvasScript>();
     }
 
     void Start()
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour
 
     public void increaseCoins(int coinsToAdd)
     {
+        Debug.Log("increasing Coins");
         coins += coinsToAdd;
         coinCanvasScript = GameObject.Find("CoinCanvas").GetComponent<CoinCanvasScript>();
         coinCanvasScript.UpdateScore(coins);

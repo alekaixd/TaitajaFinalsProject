@@ -2639,8 +2639,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4997101256276647568, guid: b61523a51eab2fb4b9fc67ab2498cc4c, type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 1158153625}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b61523a51eab2fb4b9fc67ab2498cc4c, type: 3}
+--- !u!114 &1158153625 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4165228927103649818, guid: b61523a51eab2fb4b9fc67ab2498cc4c, type: 3}
+  m_PrefabInstance: {fileID: 1158153624}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1191033519 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3836154951330720685, guid: 37fc4ac2d574c4f429b5aeedc8cf4ccd, type: 3}
