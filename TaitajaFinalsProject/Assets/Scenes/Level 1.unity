@@ -569,7 +569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2698697707444823132, guid: d3441bae622b34c4fa76a3cf33472b3f, type: 3}
       propertyPath: speed
-      value: 10
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 2698697707444823132, guid: d3441bae622b34c4fa76a3cf33472b3f, type: 3}
       propertyPath: groundCheck
@@ -577,7 +577,7 @@ PrefabInstance:
       objectReference: {fileID: 1562034637}
     - target: {fileID: 2698697707444823132, guid: d3441bae622b34c4fa76a3cf33472b3f, type: 3}
       propertyPath: jumpingPower
-      value: 20
+      value: 19.5
       objectReference: {fileID: 0}
     - target: {fileID: 2698697707444823134, guid: d3441bae622b34c4fa76a3cf33472b3f, type: 3}
       propertyPath: m_RootOrder
