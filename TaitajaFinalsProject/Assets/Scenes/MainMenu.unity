@@ -573,6 +573,14 @@ PrefabInstance:
       value: Kauppa Click
       objectReference: {fileID: 0}
     - target: {fileID: 1200662668571254938, guid: df7c6c4851c57604bb408b7a4c96fcc9, type: 3}
+      propertyPath: sfxSounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9f35fcacf334ad94a9da08844fd73970, type: 3}
+    - target: {fileID: 1200662668571254938, guid: df7c6c4851c57604bb408b7a4c96fcc9, type: 3}
+      propertyPath: sfxSounds.Array.data[3].name
+      value: liiku
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200662668571254938, guid: df7c6c4851c57604bb408b7a4c96fcc9, type: 3}
       propertyPath: musicSounds.Array.data[0].name
       value: level 3
       objectReference: {fileID: 0}

@@ -23,6 +23,7 @@ public class ClickRegister : MonoBehaviour
         {
             canvasManager.selectedLevel += 1;
             canvasManager.MoveToDirection(canvasManager.selectedLevel);
+            AudioManager.instance.PlaySFX("liiku");
         }
     }
     public void MoveLeft() // changes the level to the one on the left
@@ -31,6 +32,7 @@ public class ClickRegister : MonoBehaviour
         {
             canvasManager.selectedLevel -= 1;
             canvasManager.MoveToDirection(canvasManager.selectedLevel);
+            AudioManager.instance.PlaySFX("liiku");
         }
     }
 }

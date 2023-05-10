@@ -1442,6 +1442,10 @@ PrefabInstance:
       propertyPath: speed
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 6894929773307117465, guid: fa6f2358e243ca1499d5d4587cfe6db1, type: 3}
+      propertyPath: duobleJumpActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6894929773307117467, guid: fa6f2358e243ca1499d5d4587cfe6db1, type: 3}
       propertyPath: m_RootOrder
       value: 2
