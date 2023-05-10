@@ -574,7 +574,7 @@ PrefabInstance:
     - target: {fileID: 2698697707444823132, guid: d3441bae622b34c4fa76a3cf33472b3f, type: 3}
       propertyPath: groundCheck
       value: 
-      objectReference: {fileID: 998788577}
+      objectReference: {fileID: 1562034637}
     - target: {fileID: 2698697707444823132, guid: d3441bae622b34c4fa76a3cf33472b3f, type: 3}
       propertyPath: jumpingPower
       value: 20
@@ -968,6 +968,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1562034637 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2698697706903343182, guid: d3441bae622b34c4fa76a3cf33472b3f, type: 3}
+  m_PrefabInstance: {fileID: 1126207800}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1599883692 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1962979434530286926, guid: 80285fb47e853764e827d46f82541e3b, type: 3}
