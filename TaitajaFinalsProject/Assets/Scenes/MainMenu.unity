@@ -553,6 +553,10 @@ PrefabInstance:
       value: 0.489
       objectReference: {fileID: 0}
     - target: {fileID: 1200662668571254938, guid: df7c6c4851c57604bb408b7a4c96fcc9, type: 3}
+      propertyPath: sfxSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200662668571254938, guid: df7c6c4851c57604bb408b7a4c96fcc9, type: 3}
       propertyPath: musicSounds.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -581,6 +585,14 @@ PrefabInstance:
       value: liiku
       objectReference: {fileID: 0}
     - target: {fileID: 1200662668571254938, guid: df7c6c4851c57604bb408b7a4c96fcc9, type: 3}
+      propertyPath: sfxSounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0bdac6a1db61871468aefd61ada66e2b, type: 3}
+    - target: {fileID: 1200662668571254938, guid: df7c6c4851c57604bb408b7a4c96fcc9, type: 3}
+      propertyPath: sfxSounds.Array.data[4].name
+      value: Collect
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200662668571254938, guid: df7c6c4851c57604bb408b7a4c96fcc9, type: 3}
       propertyPath: musicSounds.Array.data[0].name
       value: level 3
       objectReference: {fileID: 0}
@@ -603,10 +615,10 @@ PrefabInstance:
     - target: {fileID: 1200662668571254938, guid: df7c6c4851c57604bb408b7a4c96fcc9, type: 3}
       propertyPath: musicSounds.Array.data[3].clip
       value: 
-      objectReference: {fileID: 8300000, guid: a0cd9cfa2cd2ec04e8c7a3e2e4de0c30, type: 3}
+      objectReference: {fileID: 8300000, guid: 0bdac6a1db61871468aefd61ada66e2b, type: 3}
     - target: {fileID: 1200662668571254938, guid: df7c6c4851c57604bb408b7a4c96fcc9, type: 3}
       propertyPath: musicSounds.Array.data[3].name
-      value: 
+      value: Collect
       objectReference: {fileID: 0}
     - target: {fileID: 1200662668571254939, guid: df7c6c4851c57604bb408b7a4c96fcc9, type: 3}
       propertyPath: m_Name
