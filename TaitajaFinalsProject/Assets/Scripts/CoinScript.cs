@@ -13,15 +13,17 @@ public class CoinScript : MonoBehaviour
 {
     public int value;
 
-    public GameManager gameManager;
+    private GameManager gameManager;
 
     public float coinRespawnTime = 7.0f;
 
 
     private void Start()
     {
-
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
+
+
     void Update()
     {
 

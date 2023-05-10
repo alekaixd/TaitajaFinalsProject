@@ -43,10 +43,10 @@ MonoBehaviour:
   active: 1
   distance:
     m_OverrideState: 1
-    m_Value: 0.312
+    m_Value: 0.115
   cropToFit:
     m_OverrideState: 1
-    m_Value: 0.634
+    m_Value: 0
 --- !u!114 &-957373559700988478
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -142,7 +142,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.278
+    m_Value: 0.172
   xMultiplier:
     m_OverrideState: 0
     m_Value: 1

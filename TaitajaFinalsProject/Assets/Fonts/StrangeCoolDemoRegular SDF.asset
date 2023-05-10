@@ -59,9 +59,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: StrangeCoolDemoRegular SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: 371712831
   material: {fileID: 1727561096994816620}
-  materialHashCode: 0
+  materialHashCode: 289905855
   m_Version: 1.1.0
   m_SourceFontFileGUID: 3e2c34ea0318a0a48a497b4cac6f5416
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 3e2c34ea0318a0a48a497b4cac6f5416, type: 3}
@@ -2627,12 +2627,12 @@ Material:
     - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0
+    - _OutlineWidth: 0.069
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 1
-    - _ScaleRatioB: 1
-    - _ScaleRatioC: 1
+    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioB: 0.6770833
+    - _ScaleRatioC: 0.6770833
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0

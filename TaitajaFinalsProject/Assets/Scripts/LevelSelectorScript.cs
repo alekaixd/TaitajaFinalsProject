@@ -13,18 +13,17 @@ public class LevelSelectorScript : MonoBehaviour
 
     void OnMouseDown() // checks for tags and loads the specified level
     {
-        if (gameObject.CompareTag("Level1"))
+        if (gameObject.CompareTag("Level1") && canvasManager.selectedLevel == 0)
         {
             SceneManager.LoadScene("Level 1");
-            Debug.Log("Level1");
         }
-        else if (gameObject.CompareTag("Level2") && canvasManager.unlockedLevels >= 1)
+        else if (gameObject.CompareTag("Level2") && canvasManager.unlockedLevels >= 1 && canvasManager.selectedLevel == 1)
         {
-            Debug.Log("Level2");
+            SceneManager.LoadScene("Level 2");
         }
-        else if (gameObject.CompareTag("Level3") && canvasManager.unlockedLevels >= 2)
+        else if (gameObject.CompareTag("Level3") && canvasManager.unlockedLevels >= 2 && canvasManager.selectedLevel == 2)
         {
-            Debug.Log("Level3");
+            SceneManager.LoadScene("Level 3");
         }
     }
 }
