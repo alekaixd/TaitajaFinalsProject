@@ -32,6 +32,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && IsGrounded() || Input.GetButtonDown("Jump") && duobleJumpActive) //When pressing jump-button player jumps
         {
+            if (Input.GetButtonDown("Jump") && !IsGrounded())
+            {
+                duobleJumpActive = false;
+            }
 
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             AudioManager.instance.PlaySFX("Jump");
@@ -44,9 +48,18 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * puolittaja);
             JumpSoundEffect.Play();
+
         }
 
+
+        if(rb.velocity.y == 0f)
+        {
+            duobleJumpActive = true;
+        }
+
+
         Flip();
+        
     }
 
     private void FixedUpdate()  // the actual part that calculates the player movement
