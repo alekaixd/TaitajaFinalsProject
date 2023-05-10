@@ -232,7 +232,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -646,7 +646,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1041,8 +1041,8 @@ MonoBehaviour:
   nextLevel: {fileID: 1758699460}
   shopIcon: {fileID: 1569367834}
   shopOverlay: {fileID: 1104870541}
+  gameManager: {fileID: 0}
   selectedLevel: 0
-  unlockedLevels: 0
 --- !u!114 &778543818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1510,6 +1510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinText: {fileID: 1071684322}
   coins: 0
+  unlockedLevels: 0
 --- !u!4 &973174143
 Transform:
   m_ObjectHideFlags: 0

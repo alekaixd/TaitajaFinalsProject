@@ -18,8 +18,10 @@ public class CanvasManager : MonoBehaviour
     public GameObject nextLevel;
     public GameObject shopIcon;
     public GameObject shopOverlay;
+
+    public GameManager gameManager;
+
     public int selectedLevel = 0; // used in the click register
-    public int unlockedLevels = 0;
 
     private CameraController cameraController;
 
@@ -61,8 +63,8 @@ public class CanvasManager : MonoBehaviour
 
     public void buyNextLevel() // unlocks a new level to be entered 
     {
-        nextLevel.SetActive(false);
-        unlockedLevels += 1;
+        //nextLevel.SetActive(false);
+        gameManager.unlockedLevels += 1;
         AudioManager.instance.PlaySFX("Buying SoundEffect");
     }
 

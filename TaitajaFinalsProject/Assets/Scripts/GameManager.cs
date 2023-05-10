@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public TMP_Text CoinText;
     public int coins = 0;
 
+    public int unlockedLevels = 0;
+
     private void Awake()
     {
         Instance = this;
