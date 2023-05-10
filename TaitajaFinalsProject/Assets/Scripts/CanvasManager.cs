@@ -31,6 +31,8 @@ public class CanvasManager : MonoBehaviour
 
     public bool onkotuplahyppyOstettu = false;
 
+    private bool coinUpgradeBought = false;
+
     void Start()
     {
         cameraController = GameObject.Find("CameraController").GetComponent<CameraController>();
@@ -41,14 +43,26 @@ public class CanvasManager : MonoBehaviour
         {
             for (int i = 0; i < gameManager.unlockedLevels; i++)
             {
-                lockIcons[gameManager.unlockedLevels - 1 - i].SetActive(false);
-                levelText[gameManager.unlockedLevels - 1 - i].SetActive(true);
+                lockIcons[gameManager.unlockedLevels - 1].SetActive(false);
+                levelText[gameManager.unlockedLevels - 1].SetActive(true);
             }
             
             if(gameManager.unlockedLevels >= 2)
             {
                 nextLevel.SetActive(false);
+                lockIcons[gameManager.unlockedLevels - 2].SetActive(false);
+                levelText[gameManager.unlockedLevels - 2].SetActive(true);
             }
+        }
+
+        if(onkotuplahyppyOstettu == true)
+        {
+            doubleJump.SetActive(false);
+        }
+
+        if (coinUpgradeBought == true)
+        {
+            shopOverlay.SetActive(false);
         }
     }
 
@@ -59,16 +73,29 @@ public class CanvasManager : MonoBehaviour
 
     public void ActivateShopOverlay()
     {
-        if (shopOverlay.activeSelf == true) 
+        if (shopOverlay.activeSelf == true)
         {
             shopOverlay.SetActive(false);
+            coinUpgradeBought = true;
         }
-        else 
-        { 
+        else
+        {
             shopOverlay.SetActive(true);
+            if (onkotuplahyppyOstettu == true)
+            {
+                doubleJump.SetActive(false);
+            }
+
+            if (coinUpgradeBought == true)
+            {
+                shopOverlay.SetActive(false);
+            }
             AudioManager.instance.PlaySFX("Kauppa Click");
+            if (gameManager.unlockedLevels >= 2)
+            {
+                nextLevel.SetActive(false);
+            }
         }
-        
     }
 
     public void buyDoubleJump()
