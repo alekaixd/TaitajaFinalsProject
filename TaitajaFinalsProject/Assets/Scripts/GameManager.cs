@@ -20,13 +20,16 @@ public class GameManager : MonoBehaviour
     public int unlockedLevels = 0;
 
 
-    public bool doubleJumpActive = true;
+    public bool doubleJumpActive = false;
+
+    private CanvasManager canvasManager;
 
 
 
     private void Awake()
     {
         Instance = this;
+        canvasManager = GameObject.Find("Canvas").GetComponent<CanvasManager>();
     }
 
     void Start()
@@ -36,7 +39,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        
+        doubleJumpActive = canvasManager.onkotuplahyppyOstettu;
     }
 
     public enum GameState

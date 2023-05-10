@@ -23,15 +23,19 @@ public class CanvasManager : MonoBehaviour
     public GameObject[] levelText;
 
 
-    public GameManager gameManager;
+    private GameManager gameManager;
 
     public int selectedLevel = 0; // used in the click register
 
     private CameraController cameraController;
 
+    public bool onkotuplahyppyOstettu = false;
+
     void Start()
     {
         cameraController = GameObject.Find("CameraController").GetComponent<CameraController>();
+
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     public void MoveToDirection(int level) // starts moving the camera towards the next level when called
@@ -59,6 +63,7 @@ public class CanvasManager : MonoBehaviour
         {
             Debug.Log("Osta duoble jump");
             Debug.Log(gameManager.doubleJumpActive);
+            onkotuplahyppyOstettu = true;
             doubleJump.SetActive(false);
             AudioManager.instance.PlaySFX("Buying SoundEffect");
             gameManager.doubleJumpActive = true;
