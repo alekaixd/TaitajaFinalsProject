@@ -11,7 +11,7 @@ using UnityEngine;
 
 public class CoinScript : MonoBehaviour
 {
-    private int value = 1;
+    
 
     private GameManager gameManager;
 
@@ -35,7 +35,7 @@ public class CoinScript : MonoBehaviour
         
         if (collision.gameObject.CompareTag("Player"))
         {
-            gameManager.increaseCoins(value);
+            gameManager.increaseCoins(gameManager.coinValue);
             StartCoroutine(CoinRespawnTimer(coinRespawnTime));
             
         }

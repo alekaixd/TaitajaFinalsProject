@@ -59,6 +59,7 @@ public class CanvasManager : MonoBehaviour
     public void buyDoubleCoins()
     {
         doubleCoins.SetActive(false);
+        gameManager.coinValue = 2;
         AudioManager.instance.PlaySFX("Buying SoundEffect");
     }
 

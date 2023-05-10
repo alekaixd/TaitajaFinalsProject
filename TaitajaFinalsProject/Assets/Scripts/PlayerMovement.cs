@@ -19,11 +19,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck; 
     [SerializeField] private LayerMask groundLayer; 
 
-
-
-
-    [SerializeField] private AudioSource JumpSoundEffect;
-
     void Update()
     {
         //Horizontal movement and jumping here 
@@ -47,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f) //This allows the player jump higher if jump button is pressed longer
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * puolittaja);
-            JumpSoundEffect.Play();
 
         }
 

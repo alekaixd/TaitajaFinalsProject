@@ -12,8 +12,10 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager Instance;
-    public TMP_Text CoinText;
+    public CoinCanvasScript coinCanvasScript;
+    
     public int coins = 0;
+    public int coinValue = 1;
 
     public int unlockedLevels = 0;
 
@@ -24,7 +26,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        CoinText.text = "Coins " + coins.ToString();
+        
     }
 
     void Update()
@@ -40,7 +42,8 @@ public class GameManager : MonoBehaviour
     public void increaseCoins(int coinsToAdd)
     {
         coins += coinsToAdd;
-        CoinText.text = "Coins " + coins.ToString();
+        coinCanvasScript = GameObject.Find("CoinCanvas").GetComponent<CoinCanvasScript>();
+        coinCanvasScript.UpdateScore(coins);
 
     }
 }
