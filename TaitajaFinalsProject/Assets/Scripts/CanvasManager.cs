@@ -51,8 +51,12 @@ public class CanvasManager : MonoBehaviour
 
     public void buyDoubleJump()
     {
+        Debug.Log("Osta duoble jump");
+        Debug.Log(gameManager.doubleJumpActive);
         doubleJump.SetActive(false);
         AudioManager.instance.PlaySFX("Buying SoundEffect");
+        gameManager.doubleJumpActive = true;
+        Debug.Log(gameManager.doubleJumpActive);
         
     }
 

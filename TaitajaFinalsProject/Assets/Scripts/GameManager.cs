@@ -19,6 +19,11 @@ public class GameManager : MonoBehaviour
 
     public int unlockedLevels = 0;
 
+
+    public bool doubleJumpActive = true;
+
+
+
     private void Awake()
     {
         Instance = this;

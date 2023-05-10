@@ -72,6 +72,7 @@ public class CameraController : MonoBehaviour
         if(switchLevel == true) //after the initial zoom is done this calls for an update in the camera
         {
             MoveCamera(canvasManager.levels[currentLevel], currentLevel);
+            
         }
     }
     private IEnumerator StartZoom(float timeBeforeZoom) // beginning delay for zoom start

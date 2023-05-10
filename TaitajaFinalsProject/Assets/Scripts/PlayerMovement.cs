@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UIElements.Experimental;
 
 //Header
@@ -12,15 +14,25 @@ public class PlayerMovement : MonoBehaviour
     public float jumpingPower = 16f;
     private bool isFacingRight = true; //indicading is the player facing left or right
     public float puolittaja = 0.5f;
-    [SerializeField] private bool duobleJumpActive = true;
+    public bool duobleJumpActive = GameManager.Instance.doubleJumpActive;
+
+    //public GameManager gameManager;
 
     [SerializeField] private Rigidbody2D rb;
 
     [SerializeField] private Transform groundCheck; 
-    [SerializeField] private LayerMask groundLayer; 
+    [SerializeField] private LayerMask groundLayer;
 
+    private void Start()
+    {
+
+        //duobleJumpActive = GameManager.Instance.doubleJumpActive;
+        Debug.Log("Toimii");
+ 
+    }
     void Update()
     {
+        
         //Horizontal movement and jumping here 
 
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -46,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        if(rb.velocity.y == 0f)
+        if(rb.velocity.y == 0f && GameManager.Instance.doubleJumpActive)
         {
             duobleJumpActive = true;
         }
