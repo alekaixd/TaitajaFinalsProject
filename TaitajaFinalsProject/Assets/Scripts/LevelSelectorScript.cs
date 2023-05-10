@@ -16,14 +16,17 @@ public class LevelSelectorScript : MonoBehaviour
         if (gameObject.CompareTag("Level1") && canvasManager.selectedLevel == 0)
         {
             SceneManager.LoadScene("Level 1");
+            AudioManager.instance.PlayMusic("Basic Level Theme");
         }
         else if (gameObject.CompareTag("Level2") && canvasManager.unlockedLevels >= 1 && canvasManager.selectedLevel == 1)
         {
             SceneManager.LoadScene("Level 2");
+            AudioManager.instance.PlayMusic("Basic Level Theme");
         }
         else if (gameObject.CompareTag("Level3") && canvasManager.unlockedLevels >= 2 && canvasManager.selectedLevel == 2)
         {
             SceneManager.LoadScene("Level 3");
+            AudioManager.instance.PlayMusic("level 3");
         }
     }
 }
