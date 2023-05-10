@@ -43,7 +43,8 @@ public class CanvasManager : MonoBehaviour
         }
         else 
         { 
-            shopOverlay.SetActive(true); 
+            shopOverlay.SetActive(true);
+            AudioManager.instance.PlaySFX("Kauppa Click");
         }
         
     }

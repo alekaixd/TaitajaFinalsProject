@@ -1537,6 +1537,10 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.444
       objectReference: {fileID: 0}
+    - target: {fileID: 1200662667708926283, guid: df7c6c4851c57604bb408b7a4c96fcc9, type: 3}
+      propertyPath: m_Volume
+      value: 0.489
+      objectReference: {fileID: 0}
     - target: {fileID: 1200662668571254938, guid: df7c6c4851c57604bb408b7a4c96fcc9, type: 3}
       propertyPath: musicSounds.Array.size
       value: 3
@@ -1548,6 +1552,14 @@ PrefabInstance:
     - target: {fileID: 1200662668571254938, guid: df7c6c4851c57604bb408b7a4c96fcc9, type: 3}
       propertyPath: sfxSounds.Array.data[1].name
       value: Buying SoundEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200662668571254938, guid: df7c6c4851c57604bb408b7a4c96fcc9, type: 3}
+      propertyPath: sfxSounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0c4f7836e7d93d340aa8170101940c3f, type: 3}
+    - target: {fileID: 1200662668571254938, guid: df7c6c4851c57604bb408b7a4c96fcc9, type: 3}
+      propertyPath: sfxSounds.Array.data[2].name
+      value: Kauppa Click
       objectReference: {fileID: 0}
     - target: {fileID: 1200662668571254938, guid: df7c6c4851c57604bb408b7a4c96fcc9, type: 3}
       propertyPath: musicSounds.Array.data[0].name

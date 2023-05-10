@@ -29,6 +29,7 @@ public class TimerScript : MonoBehaviour
         if(time <= 0)
         {
             SceneManager.LoadScene("SampleScene");
+            AudioManager.instance.PlayMusic("Base Theme");
         }
 
         StartCoroutine(Timer());
