@@ -19,6 +19,10 @@ public class CanvasManager : MonoBehaviour
     public GameObject shopIcon;
     public GameObject shopOverlay;
 
+    public GameObject[] lockIcons;
+    public GameObject[] levelText;
+
+
     public GameManager gameManager;
 
     public int selectedLevel = 0; // used in the click register
@@ -51,27 +55,48 @@ public class CanvasManager : MonoBehaviour
 
     public void buyDoubleJump()
     {
-        Debug.Log("Osta duoble jump");
-        Debug.Log(gameManager.doubleJumpActive);
-        doubleJump.SetActive(false);
-        AudioManager.instance.PlaySFX("Buying SoundEffect");
-        gameManager.doubleJumpActive = true;
-        Debug.Log(gameManager.doubleJumpActive);
-        
+        if (gameManager.coins >= 20)
+        {
+            Debug.Log("Osta duoble jump");
+            Debug.Log(gameManager.doubleJumpActive);
+            doubleJump.SetActive(false);
+            AudioManager.instance.PlaySFX("Buying SoundEffect");
+            gameManager.doubleJumpActive = true;
+            Debug.Log(gameManager.doubleJumpActive);
+        }
     }
 
     public void buyDoubleCoins()
     {
-        doubleCoins.SetActive(false);
-        gameManager.coinValue = 2;
-        AudioManager.instance.PlaySFX("Buying SoundEffect");
+        if (gameManager.coins >= 20)
+        {
+            gameManager.coins -= 20;
+            doubleCoins.SetActive(false);
+            gameManager.coinValue = 2;
+            AudioManager.instance.PlaySFX("Buying SoundEffect");
+        }
+
     }
 
     public void buyNextLevel() // unlocks a new level to be entered 
     {
-        //nextLevel.SetActive(false);
-        gameManager.unlockedLevels += 1;
-        AudioManager.instance.PlaySFX("Buying SoundEffect");
+        if (gameManager.coins >= 50)
+        {
+            gameManager.coins -= 50;
+            gameManager.unlockedLevels += 1;
+            lockIcons[gameManager.unlockedLevels - 1].SetActive(false);
+            levelText[gameManager.unlockedLevels - 1].SetActive(true);
+
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlaySFX("Buying SoundEffect");
+            }
+
+            if (gameManager.unlockedLevels == 2)
+            {
+                nextLevel.SetActive(false);
+            }
+        }
     }
 
 
