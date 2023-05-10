@@ -39,6 +39,7 @@ public class CoinScript : MonoBehaviour
         {
             Debug.Log("playerFound");
             gameManager.increaseCoins(gameManager.coinValue);
+            AudioManager.instance.PlaySFX("Collect");
             Debug.Log("increase coins");
             StartCoroutine(CoinRespawnTimer(coinRespawnTime));
         }
