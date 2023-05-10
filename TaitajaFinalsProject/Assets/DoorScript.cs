@@ -19,6 +19,7 @@ public class DoorScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        AudioManager.instance.PlayMusic("Base Theme");
         SceneManager.LoadScene("WinnerScene");
     }
 
