@@ -2119,7 +2119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1092703d19543184899dff073225a983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 100
+  coins: 0
   coinValue: 1
   unlockedLevels: 0
   coinUpgradeBought: 0

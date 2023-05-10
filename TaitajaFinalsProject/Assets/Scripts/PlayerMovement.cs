@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UIElements.Experimental;
 
 //Header
 //Controls the player character (moving, jumping etc)
