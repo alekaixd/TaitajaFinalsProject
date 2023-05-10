@@ -15,7 +15,7 @@ MonoBehaviour:
   active: 1
   color:
     m_OverrideState: 1
-    m_Value: {r: 0.9716981, g: 0.73436934, b: 0.18792273, a: 1}
+    m_Value: {r: 0.14300786, g: 0.4528302, b: 0, a: 1}
   center:
     m_OverrideState: 1
     m_Value: {x: 0.5, y: 0.5}
@@ -142,7 +142,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.172
+    m_Value: 0.11
   xMultiplier:
     m_OverrideState: 0
     m_Value: 1
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fa0085f50d5e54f8144f766051a691, type: 3}
   m_Name: FilmGrain
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   type:
     m_OverrideState: 1
     m_Value: 1
