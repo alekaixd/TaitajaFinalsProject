@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpingPower = 16f;
     private bool isFacingRight = true; //indicading is the player facing left or right
     public float puolittaja = 0.5f;
+    [SerializeField] private bool duobleJumpActive = true;
 
     [SerializeField] private Rigidbody2D rb;
 
@@ -29,12 +30,15 @@ public class PlayerMovement : MonoBehaviour
 
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && IsGrounded()) //When pressing jump-button player jumps
+        if (Input.GetButtonDown("Jump") && IsGrounded() || Input.GetButtonDown("Jump") && duobleJumpActive) //When pressing jump-button player jumps
         {
+
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             AudioManager.instance.PlaySFX("Jump");
 
         }
+
+
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f) //This allows the player jump higher if jump button is pressed longer
         {
