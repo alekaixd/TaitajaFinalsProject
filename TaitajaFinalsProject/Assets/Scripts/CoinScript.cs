@@ -11,7 +11,7 @@ using UnityEngine;
 
 public class CoinScript : MonoBehaviour
 {
-    public int value;
+    private int value = 1;
 
     private GameManager gameManager;
 
@@ -32,10 +32,12 @@ public class CoinScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) //checks for the player and adds the coins
     {
+        
         if (collision.gameObject.CompareTag("Player"))
         {
             gameManager.increaseCoins(value);
             StartCoroutine(CoinRespawnTimer(coinRespawnTime));
+            
         }
     }
 
